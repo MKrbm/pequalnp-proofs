@@ -52,13 +52,11 @@ theorem PEqualNP.Outside.R_meta_2112_1
     let p : Fin 9 → Fin 9 := ![1, 0, 5, 8, 6, 2, 4, 7, 3]
     apply useMap p (by decide) (by decide)
     intro x
-    change _ = _
     dsimp [f, p, Matrix.cons_val_succ, Matrix.cons_val_zero]
-    bv_decide
+    ac_rfl
   · subst v
     let p : Fin 9 → Fin 9 := ![2, 1, 0, 5, 7, 3, 6, 4, 8]
     apply useMap p (by decide) (by decide)
     intro x
-    change _ = _
     dsimp [f, p, Matrix.cons_val_succ, Matrix.cons_val_zero]
-    bv_decide
+    ac_rfl
